@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ai-chatbot-backend
+
+ai:
+  provider:
+    base-url: https://api.openai.com/v1
+    api-key: ${OPENAI_API_KEY}
+    model: gpt-4.1-mini
+    timeout-seconds: 60
+
+logging:
+  level:
+    com.hanpass.aichatbot: INFO

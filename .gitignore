@@ -1,0 +1,10 @@
+target/
+.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+*.log
+.idea/
+.vscode/
+.DS_Store
+
+OPENAI_API_KEY
