@@ -2,5 +2,7 @@ package com.hanpass.aichatbot.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record ChatRequest(@NotBlank String message) {
+import java.util.UUID;
+
+public record ChatRequest(UUID conversationId, @NotBlank String message) {
 }

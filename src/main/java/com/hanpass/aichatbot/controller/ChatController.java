@@ -26,6 +26,6 @@ public class ChatController {
     @PostMapping
     public ChatResponse chat(@Valid @RequestBody ChatRequest request) {
         log.info("Received chat request");
-        return chatService.ask(request.message());
+        return chatService.ask(request);
     }
 }

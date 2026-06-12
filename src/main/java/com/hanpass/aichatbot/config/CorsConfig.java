@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins("http://localhost:4200", "https://ai-chatbot-frontend-lmil.onrender.com")
-                        .allowedMethods("POST", "OPTIONS")
+                        .allowedMethods("GET", "POST", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }
         };

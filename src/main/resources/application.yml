@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: ai-chatbot-backend
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/ai_chatbot}
+    username: ${DATABASE_USERNAME:ai_chatbot}
+    password: ${DATABASE_PASSWORD:ai_chatbot}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
 
 ai:
   provider:
