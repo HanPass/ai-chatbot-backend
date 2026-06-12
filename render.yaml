@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ai-chatbot-backend
+    runtime: docker
+    repo: https://github.com/HanPass/ai-chatbot-backend.git
+    branch: main
+    plan: free
+    region: frankfurt
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+
+  - type: web
+    name: ai-chatbot-frontend
+    runtime: static
+    repo: https://github.com/HanPass/ai-chatbot-frontend.git
+    branch: main
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist/ai-chatbot-frontend/browser
+    autoDeployTrigger: commit
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://ai-chatbot-backend.onrender.com/api/*
+      - type: rewrite
+        source: /*
+        destination: /index.html
