@@ -43,6 +43,15 @@ mvn spring-boot:run
 
 Le backend démarre sur `http://localhost:8080`.
 
+## Déploiement Render
+
+Ce repo contient un `render.yaml` qui décrit deux services Render :
+
+- `ai-chatbot-backend` : web service Docker Spring Boot.
+- `ai-chatbot-frontend` : static site Angular depuis `HanPass/ai-chatbot-frontend`.
+
+Dans Render, créer un Blueprint depuis ce repo puis renseigner la variable secrète `OPENAI_API_KEY`.
+
 ## Tester avec curl
 
 ```bash
@@ -71,4 +80,4 @@ mvn test
 - Ajouter le streaming avec Server-Sent Events ou WebSocket.
 - Ajouter un RAG en amont de `ChatService`.
 - Ajouter des tools via une couche d'orchestration dédiée.
-- Ajouter une persistance quand le besoin métier est confirmé.
+- Ajouter une persistance quand le besoin métier est confirméé.
