@@ -80,4 +80,4 @@ mvn test
 - Ajouter le streaming avec Server-Sent Events ou WebSocket.
 - Ajouter un RAG en amont de `ChatService`.
 - Ajouter des tools via une couche d'orchestration dédiée.
-- Ajouter une persistance quand le besoin métier est confirméé.
+- Ajouter une persistance quand le besoin métier est confirmé.
